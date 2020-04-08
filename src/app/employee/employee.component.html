@@ -1,33 +1,24 @@
-<div class="table-responsive">
+<div style="float: right;">
+  <button [routerLink]="['/employees',0,'edit']">Add Employee</button>
+</div>
+  <div class="table-responsive">
+
   <table class="table">
       <thead>
         <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
+          <th>Name</th>
           <th>Email</th>
-          <th>Contact</th>
-          <th>Address</th>
-          <th>Username</th>
-          <th>Password</th>
-          <th>Gender</th>
-          <th>Qualification</th>
-          <th>Experience</th>
-          <th>Coding Languaages</th>
+          <th>Date of Birth</th>
+          <th>Date of Joining</th>
+
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let e of employees">
-          <td>{{e.fname}}</td>
-          <td>{{e.lname}}</td>
+          <td>{{e.name}}</td>
           <td>{{e.email}}</td>
-          <td>{{e.contact}}</td>
-          <td>{{e.address}}</td>
-          <td>{{e.username}}</td>
-          <td>{{e.password}}</td>
-          <td>{{e.gender}}</td>
-          <td>{{e.qualification}}</td>
-          <td>{{e.experience}}</td>
-          <td>{{e.codingLanguages}}</td>
+          <td>{{e.dob}}</td>
+          <td>{{e.doj}}</td>
           <td>
             <button class="btn btn-outline-primary btn-sm" [routerLink]="['/employees',e.id,'edit']">
               Edit

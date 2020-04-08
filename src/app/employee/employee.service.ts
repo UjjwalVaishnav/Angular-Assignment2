@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { employee } from './employee';
 import { Observable, of } from 'rxjs';
-import { catchError, tap, map } from 'rxjs/operators';
+import { tap, map } from 'rxjs/operators';
 
 
 @Injectable({
@@ -10,13 +10,16 @@ import { catchError, tap, map } from 'rxjs/operators';
 })
 export class EmployeeService {
 
-  private empUrl='api/employee';
+  readonly empUrl='http://localhost:62010/api/Employees';
 
   constructor(private http:HttpClient) { }
 
   getEmployees(): Observable<employee[]> {
-    return this.http.get<employee[]>(this.empUrl)
-      .pipe(tap(data => console.log(JSON.stringify(data))));
+   // debugger;
+   return this.http.get<employee[]>(this.empUrl)
+   .pipe(
+    // catchError(err => this.handleError(err))
+   );
   }
 
   getEmployee(id: number): Observable<employee> {
@@ -58,17 +61,11 @@ export class EmployeeService {
     // Return an initialized object
     return {
       id: 0,
-      fname: null,
-      lname:null,
-      address:null,
-      codingLanguages:[],
-      contact:0,
+      name: null,
       email:null,
-      experience:0,
-      gender:null,
-      password:null,
-      qualification:null,
-      username:null
+      dob:null,
+      doj:null,
+      password:null
     };
   }
 }

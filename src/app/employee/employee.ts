@@ -1,18 +1,12 @@
 export interface employee{
   id:number;
-  fname:string;
-  lname:string;
+  name:string;
   email:string;
-  contact:number;
-  address:string;
-  username:string;
+  dob:Date;
+  doj:Date;
   password:string;
-  gender:string;
-  qualification:string;
-  experience:number;
-  codingLanguages:string[];
 }
-export interface ProductResolved {
+export interface EmployeeResolved {
   employee: employee;
   error?: any;
 }

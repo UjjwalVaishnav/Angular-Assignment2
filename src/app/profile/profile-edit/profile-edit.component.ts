@@ -1,21 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { employee } from '../employee';
-import { EmployeeService } from '../employee.service';
-//import { FormsModule } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
-
+import { employee } from 'src/app/employee/employee';
+import { Router, ActivatedRoute } from '@angular/router';
+import { EmployeeService } from 'src/app/employee/employee.service';
 
 @Component({
-  selector: 'app-employee-edit',
-  templateUrl: './employee-edit.component.html',
-  styleUrls: ['./employee-edit.component.scss']
+  selector: 'app-profile-edit',
+  templateUrl: './profile-edit.component.html',
+  styleUrls: ['./profile-edit.component.scss']
 })
-export class EmployeeEditComponent implements OnInit {
+export class ProfileEditComponent implements OnInit {
 
   employee:employee={
     id:null,
     name:null,
-
     email:null,
     dob:null,
     doj:null,
@@ -35,17 +32,13 @@ export class EmployeeEditComponent implements OnInit {
   }
   saveEmployee(): void {
 
-      if (this.id === 0) {
-        this.employeeService.addEmployee(this.employee).subscribe({
-          next: () => this.router.navigate(['/employees']),
-          error: err => console.log('error')
-        });
-      } else {
+
         this.employeeService.updateEmployee(this.employee).subscribe({
-          next: () => this.router.navigate(['/employees']),
+          next: () => this.router.navigate(['/profile/1']),
           error: err => console.log('error')
         });
-      }
+
 
   }
+
 }

@@ -8,45 +8,28 @@ export class EmployeeData implements InMemoryDbService {
     const employee: employee[] = [
       {
         id:1,
-        fname:'ujjwal',
-        contact:19898988,
-        address:'nadiad',
+        name:'ujjwal',
         email:'a@gmail.com',
-        experience:0,
-        gender:'male',
-        lname:'vaishnav',
-        password:'123',
-        qualification:'BCA',
-        username:'uv',
-        codingLanguages:['java']
+        dob:new Date('06-02-1998'),
+        doj:new Date('20-03-2020'),
+        password:'123'
       },
       {
         id:2,
-        fname:'vipul',
-        contact:11111,
-        address:'nadiad',
+        name:'vipul',
         email:'vipul@gmail.com',
-        experience:0,
-        gender:'male',
-        lname:'vasava',
-        password:'123',
-        qualification:'BCA',
-        username:'vipul',
-        codingLanguages:['java']
+        dob:new Date('06-02-1998'),
+        doj:new Date('20-03-2020'),
+        password:'123'
       },
       {
         id:3,
-        fname:'hitman',
-        contact:444444,
-        address:'nadiad',
+        name:'hitman',
+
         email:'hit@gmail.com',
-        experience:0,
-        gender:'male',
-        lname:'pool',
-        password:'123',
-        qualification:'BCA',
-        username:'hitmanpool',
-        codingLanguages:['java']
+        dob:new Date('06-02-1998'),
+        doj:new Date('20-03-2020'),
+        password:'123'
       }
     ];
     return { employee };

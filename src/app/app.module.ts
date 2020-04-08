@@ -10,12 +10,24 @@ import { HttpClientModule } from '@angular/common/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { EmployeeData } from './employee/employee-data';
 import { FormsModule } from '@angular/forms';
+import { LeaveConfigComponent } from './leave-config/leave-config.component';
+import { LeaveConfigEditComponent } from './leave-config/leave-config-edit/leave-config-edit.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ProfileEditComponent } from './profile/profile-edit/profile-edit.component';
+import { LoginComponent } from './login/login.component';
+import { LeaveListComponent } from './leave-list/leave-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeComponent,
-    EmployeeEditComponent
+    EmployeeEditComponent,
+    LeaveConfigComponent,
+    LeaveConfigEditComponent,
+    ProfileComponent,
+    ProfileEditComponent,
+    LoginComponent,
+    LeaveListComponent
   ],
   imports: [
     BrowserModule,
